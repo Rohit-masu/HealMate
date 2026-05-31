@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Mogra&family=Montserrat&family=Outfit:wght@100..900&display=swap");
+@import "tailwindcss";
+
+::-webkit-scrollbar {
+  @apply hidden;
+}
+
+@theme {
+  --color-primary: #0f766e;
+  --color-tahiti: #3ab7bf;
+  --color-bermuda: #78dcca;
+  --font-display: Georgia, "Times New Roman", serif;
+}
+
+* {
+  font-family: Outfit;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f7fffc 0%, #f8fafc 100%);
+  color: #102a43;
+}

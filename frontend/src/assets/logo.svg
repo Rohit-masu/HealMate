@@ -1,0 +1,8 @@
+<svg width="218" height="48" viewBox="0 0 218 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="48" height="48" rx="14" fill="#0F766E"/>
+  <path d="M24 12V36" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M14 24H34" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  <path d="M13 16.5C15.6 13.8 19.2 12.2 23 12.2C30.6 12.2 36.8 18.3 36.8 25.9C36.8 31.7 33.2 36.8 28 38.8" stroke="#A7F3D0" stroke-width="3" stroke-linecap="round"/>
+  <text x="62" y="31" fill="#102A43" font-family="Georgia, 'Times New Roman', serif" font-size="25" font-weight="700">HealMate</text>
+  <path d="M64 39H130" stroke="#14B8A6" stroke-width="3" stroke-linecap="round"/>
+</svg>

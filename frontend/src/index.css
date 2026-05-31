@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0f766e;
+  --color-healmate-ink: #102a43;
+  --color-healmate-soft: #e6fffb;
+  --color-healmate-mint: #14b8a6;
+  --font-display: Georgia, "Times New Roman", serif;
+  --color-tahiti: #3ab7bf;
+  --color-bermuda: #78dcca;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, #f7fffc 0%, #ffffff 34%, #f8fafc 100%);
+  color: #102a43;
+}
+
+.active hr{
+  @apply block
+}
+
+::-webkit-scrollbar{
+  @apply hidden
+}
+
+@layer utilities {
+  .grid-auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem; /* Optional */
+  }
+}
