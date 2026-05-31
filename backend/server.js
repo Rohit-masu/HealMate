@@ -22,7 +22,7 @@ const allowedOrigins = [
   process.env.ADMIN_URL,
 ].filter(Boolean)
 
-const corsOptions = {
+app.use(cors({
   origin: function (origin, callback) {
     if (!origin) return callback(null, true)
     if (allowedOrigins.includes(origin)) return callback(null, true)
@@ -32,11 +32,9 @@ const corsOptions = {
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'atoken', 'dtoken', 'token'],
-}
-
-// ✅ Fix: use '(.*)' instead of '*' for Express v5 / path-to-regexp v8
-app.options('(.*)', cors(corsOptions))
-app.use(cors(corsOptions))
+  preflightContinue: false,
+  optionsSuccessStatus: 204
+}))
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
@@ -53,11 +51,9 @@ app.use("/api/admin", adminRouter)
 app.use('/api/doctor', doctorRouter)
 app.use('/api/user', userRouter)
 
-app.get('/', (req, res) => {
-  res.send('API WORKING')
-})
+app.get('/', (req, res) => res.send('API WORKING'))
 
-app.use((req, res, next) => {
+app.use((req, res) => {
   console.log("❌ Route not found:", req.method, req.originalUrl)
   res.status(404).json({ error: "Route not found" })
 })
